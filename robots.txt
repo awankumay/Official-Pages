@@ -110,6 +110,7 @@ User-agent: YaK
 User-agent: YandexAdditional
 User-agent: YandexAdditionalBot
 User-agent: YouBot
-User-agent: AhrefsBot
-User-agent: Googlebot
-Disallow: /
+# Allow search engines to index the site
+# User-agent: AhrefsBot
+# User-agent: Googlebot
+# Disallow: /
