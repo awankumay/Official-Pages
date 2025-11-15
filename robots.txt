@@ -2,7 +2,7 @@ User-agent: *
 Disallow: /cache/
 
 # Sitemap
-Sitemap: https://mitracoretech.com/sitemap.xml
+Sitemap: https://mitracoretech.id/sitemap.xml
 
 # Blocking AI
 User-agent: AddSearchBot
