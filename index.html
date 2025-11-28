@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="id" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mitra Coretech - Technology Solutions & Digital Innovation</title>
+    <title>Mitra Coretech - Solusi Teknologi & Inovasi Digital</title>
 
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Mitra Coretech is a leading technology solutions provider in Indonesia, specializing in software development, digital transformation, IT infrastructure, and innovation consulting."
+      content="Mitra Coretech adalah penyedia solusi teknologi terkemuka di Indonesia, mengkhususkan diri dalam pengembangan perangkat lunak, transformasi digital, infrastruktur TI, dan konsultasi inovasi."
     />
     <meta
       name="keywords"
-      content="Mitra Coretech, technology solutions, digital innovation, software development, IT services, tech company, Indonesia"
+      content="Mitra Coretech, solusi teknologi, inovasi digital, pengembangan software, jasa IT, perusahaan teknologi, Indonesia, konsultan IT"
     />
     <meta name="author" content="Mitra Coretech" />
     <meta name="robots" content="index, follow" />
-    <meta name="language" content="English" />
+    <meta name="language" content="Indonesian" />
     <meta name="revisit-after" content="7 days" />
 
     <!-- Open Graph / Facebook -->
@@ -24,15 +24,15 @@
     <meta property="og:url" content="https://mitracoretech.id/" />
     <meta
       property="og:title"
-      content="Mitra Coretech - Technology Solutions & Digital Innovation"
+      content="Mitra Coretech - Solusi Teknologi & Inovasi Digital"
     />
     <meta
       property="og:description"
-      content="Mitra Coretech is a leading technology solutions provider in Indonesia, specializing in software development, digital transformation, and IT consulting."
+      content="Mitra Coretech adalah penyedia solusi teknologi terkemuka di Indonesia, mengkhususkan diri dalam pengembangan perangkat lunak, transformasi digital, dan konsultasi TI."
     />
     <meta
       property="og:image"
-      content="https://mitracoretech.id/assets/images/logo.png"
+      content="https://mitracoretech.id/assets/images/logo-dark.png"
     />
     <meta property="og:site_name" content="Mitra Coretech" />
 
@@ -41,15 +41,15 @@
     <meta name="twitter:url" content="https://mitracoretech.id/" />
     <meta
       name="twitter:title"
-      content="Mitra Coretech - Technology Solutions & Digital Innovation"
+      content="Mitra Coretech - Solusi Teknologi & Inovasi Digital"
     />
     <meta
       name="twitter:description"
-      content="Mitra Coretech is a leading technology solutions provider in Indonesia, specializing in software development, digital transformation, and IT consulting."
+      content="Mitra Coretech adalah penyedia solusi teknologi terkemuka di Indonesia, mengkhususkan diri dalam pengembangan perangkat lunak, transformasi digital, dan konsultasi TI."
     />
     <meta
       name="twitter:image"
-      content="https://mitracoretech.id/assets/images/logo.png"
+      content="https://mitracoretech.id/assets/images/logo-dark.png"
     />
 
     <!-- Canonical URL -->
@@ -64,46 +64,6 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Mitra Coretech",
-        "alternateName": "PT Mitra Coretech Indonesia",
-        "url": "https://mitracoretech.id",
-        "logo": "https://mitracoretech.id/assets/images/logo.png",
-        "description": "Mitra Coretech is a leading technology solutions and digital innovation services provider in Indonesia, specializing in software development, IT consulting, and digital transformation.",
-        "email": "support@mitracoretech.id",
-        "foundingDate": "2024",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "ID",
-          "addressRegion": "Indonesia"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "email": "support@mitracoretech.id",
-          "contactType": "customer support",
-          "availableLanguage": ["en", "id"]
-        },
-        "sameAs": ["https://www.linkedin.com/company/mitra-coretech"]
-      }
-    </script>
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Mitra Coretech",
-        "url": "https://mitracoretech.id",
-        "description": "Official website of Mitra Coretech - Technology Solutions & Digital Innovation",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Mitra Coretech"
-        }
-      }
-    </script>
   </head>
 
   <body class="gradient-bg text-white min-h-screen">
@@ -114,26 +74,56 @@
       <div class="container mx-auto px-4 py-3">
         <div class="flex justify-between items-center">
           <div class="flex items-center space-x-2">
+            <!-- Dynamic logo container -->
             <img
-              src="./assets/images/logo.png"
+              id="nav-logo"
+              src="./assets/images/logo-dark.png"
               alt="Mitra Coretech Logo"
-              class="h-10 w-10 rounded-lg"
+              class="h-16 w-16 rounded-lg transition-all duration-300"
             />
-            <span class="text-xl font-bold">Mitra Coretech</span>
+            <!-- Title Navbar (conditional visibility) -->
+            <span id="nav-title" class="text-xl font-bold">Mitra Coretech</span>
           </div>
-          <div class="hidden md:flex space-x-6">
+          <div class="hidden md:flex items-center space-x-6">
             <a href="#home" class="hover:text-yellow-400 transition-colors"
-              >Home</a
+              >Beranda</a
             >
             <a href="#about" class="hover:text-yellow-400 transition-colors"
-              >About</a
+              >Tentang Kami</a
             >
             <a href="#services" class="hover:text-yellow-400 transition-colors"
-              >Services</a
+              >Layanan</a
             >
             <a href="#contact" class="hover:text-yellow-400 transition-colors"
-              >Contact</a
+              >Kontak</a
             >
+            <!-- Theme toggle button -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
+              title="Toggle theme"
+            >
+              <svg
+                id="theme-icon-dark"
+                class="w-5 h-5 hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                />
+              </svg>
+              <svg
+                id="theme-icon-light"
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                />
+              </svg>
+            </button>
           </div>
           <button id="mobile-menu-btn" class="md:hidden">
             <svg
@@ -156,22 +146,22 @@
           <a
             href="#home"
             class="block py-2 hover:text-yellow-400 transition-colors"
-            >Home</a
+            >Beranda</a
           >
           <a
             href="#about"
             class="block py-2 hover:text-yellow-400 transition-colors"
-            >About</a
+            >Tentang Kami</a
           >
           <a
             href="#services"
             class="block py-2 hover:text-yellow-400 transition-colors"
-            >Services</a
+            >Layanan</a
           >
           <a
             href="#contact"
             class="block py-2 hover:text-yellow-400 transition-colors"
-            >Contact</a
+            >Kontak</a
           >
         </div>
       </div>
@@ -182,80 +172,45 @@
       id="home"
       class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
     >
-      <!-- Background Tech Elements -->
-      <div class="absolute inset-0 opacity-10">
-        <div
-          class="absolute top-20 right-20 w-32 h-32 border border-blue-400 rounded-full animate-pulse"
-        ></div>
-        <div
-          class="absolute bottom-40 left-20 w-24 h-24 border border-blue-400 rounded-full animate-ping"
-        ></div>
-        <div
-          class="absolute top-1/2 left-1/4 w-16 h-16 border border-blue-400 rounded-full animate-bounce"
-        ></div>
-      </div>
-
       <div class="container mx-auto px-4 z-10">
         <div class="flex flex-col lg:flex-row items-center justify-between">
           <div class="lg:w-1/2 mb-10 lg:mb-0">
             <h1
               class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             >
-              Technology Solutions for
-              <span class="text-yellow-400">Digital Innovation</span>
+              Solusi Teknologi untuk
+              <span class="text-yellow-400">Inovasi Digital</span>
             </h1>
             <p class="text-lg md:text-xl mb-8 text-gray-300">
-              Mitra Coretech is your trusted partner in digital transformation.
-              We deliver cutting-edge technology solutions that drive business
-              growth and innovation in Indonesia.
+              Mitra Coretech adalah mitra terpercaya Anda dalam transformasi
+              digital. Kami menghadirkan solusi teknologi terkini yang mendorong
+              pertumbuhan bisnis dan inovasi di Indonesia.
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
               <a
                 href="#services"
                 class="px-8 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition-colors text-center"
               >
-                Our Services
+                Layanan Kami
               </a>
               <a
                 href="#contact"
+                id="contact-btn"
                 class="px-8 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-black transition-colors text-center"
               >
-                Contact Us
+                Hubungi Kami
               </a>
             </div>
           </div>
           <div class="lg:w-1/2 flex justify-center">
             <div class="relative">
               <!-- Logo with enhanced effects -->
-              <div
-                class="relative transform transition-all duration-500 hover:scale-105"
-              >
+              <div class="relative">
                 <img
-                  src="./assets/images/logo.png"
+                  src="./assets/images/banner.jpg"
                   alt="Mitra Coretech Logo"
-                  class="w-64 h-64 md:w-80 md:h-80 relative z-10 transition-all duration-700 hover:drop-shadow-2xl drop-shadow-[0_0_30px_rgba(59,130,246,0.5)] hover:drop-shadow-[0_0_50px_rgba(34,197,94,0.6)] rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 animate-float"
+                  class="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[28rem] xl:h-[28rem] 2xl:w-[32rem] 2xl:h-[32rem] relative z-10 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10"
                 />
-              </div>
-              <!-- Orbiting elements -->
-              <div
-                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 pointer-events-none"
-              >
-                <div
-                  class="absolute top-0 left-1/2 w-2 h-2 bg-blue-400 rounded-full animate-spin opacity-60"
-                  style="animation-duration: 8s; transform-origin: 0 192px"
-                ></div>
-                <div
-                  class="absolute top-0 left-1/2 w-1.5 h-1.5 bg-cyan-300 rounded-full animate-spin opacity-50"
-                  style="
-                    animation-duration: 12s;
-                    animation-direction: reverse;
-                    transform-origin: 0 168px;
-                  "
-                ></div>
-                <div
-                  class="absolute top-0 left-1/2 w-1 h-1 bg-yellow-400 rounded-full animate-spin opacity-40"
-                  style="animation-duration: 15s; transform-origin: 0 216px"
-                ></div>
               </div>
             </div>
           </div>
@@ -268,14 +223,15 @@
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
-            About <span class="text-yellow-400">Mitra Coretech</span>
+            Tentang <span class="text-yellow-400">Mitra Coretech</span>
           </h2>
           <p class="text-lg text-gray-300 leading-relaxed">
-            Founded in 2024, Mitra Coretech has quickly established itself as a
-            leading technology solutions provider in Indonesia. Our team of
-            expert developers, consultants, and innovators are dedicated to
-            helping businesses transform their digital presence and leverage
-            cutting-edge technologies for sustainable growth.
+            Didirikan pada tahun 2025, Mitra Coretech dengan cepat memantapkan
+            diri sebagai penyedia solusi teknologi terkemuka di Indonesia. Tim
+            kami yang terdiri dari pengembang ahli, konsultan, dan inovator
+            berdedikasi untuk membantu bisnis mengubah kehadiran digital mereka
+            dan memanfaatkan teknologi mutakhir untuk pertumbuhan yang
+            berkelanjutan.
           </p>
         </div>
 
@@ -300,10 +256,10 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Innovation First</h3>
+            <h3 class="text-xl font-semibold mb-3">Inovasi Terdepan</h3>
             <p class="text-gray-300">
-              We stay ahead of technology trends to deliver innovative solutions
-              that give your business a competitive edge.
+              Kami selalu mengikuti tren teknologi untuk memberikan solusi
+              inovatif yang memberikan keunggulan kompetitif bagi bisnis Anda.
             </p>
           </div>
 
@@ -327,10 +283,10 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Expert Team</h3>
+            <h3 class="text-xl font-semibold mb-3">Tim Ahli</h3>
             <p class="text-gray-300">
-              Our certified professionals bring years of experience and deep
-              expertise across various technology domains.
+              Para profesional bersertifikat kami membawa pengalaman
+              bertahun-tahun dan keahlian mendalam di berbagai bidang teknologi.
             </p>
           </div>
 
@@ -354,10 +310,10 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Quality Assurance</h3>
+            <h3 class="text-xl font-semibold mb-3">Jaminan Kualitas</h3>
             <p class="text-gray-300">
-              We follow industry best practices and rigorous testing to ensure
-              reliable, scalable, and secure solutions.
+              Kami mengikuti praktik terbaik industri dan pengujian ketat untuk
+              memastikan solusi yang andal, dapat diskalakan, dan aman.
             </p>
           </div>
         </div>
@@ -369,17 +325,17 @@
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
-            Our <span class="text-yellow-400">Services</span>
+            <span class="text-yellow-400">Layanan</span> Kami
           </h2>
           <p class="text-lg text-gray-300">
-            Comprehensive technology solutions tailored to meet your unique
-            business needs
+            Solusi teknologi komprehensif yang disesuaikan untuk memenuhi
+            kebutuhan bisnis unik Anda
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
-            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all hover:transform hover:scale-105"
+            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
           >
             <div
               class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4"
@@ -398,20 +354,20 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Software Development</h3>
+            <h3 class="text-xl font-semibold mb-3">Pengembangan Software</h3>
             <p class="text-gray-300 mb-4">
-              Custom software solutions built with modern technologies to
-              streamline your business processes.
+              Solusi perangkat lunak kustom yang dibangun dengan teknologi
+              modern untuk merampingkan proses bisnis Anda.
             </p>
             <ul class="text-sm text-gray-400 space-y-1">
-              <li>• Web Applications</li>
-              <li>• Mobile Apps</li>
-              <li>• Enterprise Software</li>
+              <li>• Aplikasi Web</li>
+              <li>• Aplikasi Mobile</li>
+              <li>• Perangkat Lunak Perusahaan</li>
             </ul>
           </div>
 
           <div
-            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all hover:transform hover:scale-105"
+            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
           >
             <div
               class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mb-4"
@@ -430,20 +386,20 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Digital Transformation</h3>
+            <h3 class="text-xl font-semibold mb-3">Transformasi Digital</h3>
             <p class="text-gray-300 mb-4">
-              Strategic consulting and implementation to digitize your
-              operations and enhance customer experience.
+              Konsultasi strategis dan implementasi untuk mendigitalkan operasi
+              Anda dan meningkatkan pengalaman pelanggan.
             </p>
             <ul class="text-sm text-gray-400 space-y-1">
-              <li>• Process Automation</li>
-              <li>• Digital Strategy</li>
-              <li>• Change Management</li>
+              <li>• Otomatisasi Proses</li>
+              <li>• Strategi Digital</li>
+              <li>• Manajemen Perubahan</li>
             </ul>
           </div>
 
           <div
-            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all hover:transform hover:scale-105"
+            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
           >
             <div
               class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4"
@@ -462,20 +418,20 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3">IT Infrastructure</h3>
+            <h3 class="text-xl font-semibold mb-3">Infrastruktur TI</h3>
             <p class="text-gray-300 mb-4">
-              Robust and scalable infrastructure solutions including cloud
-              services and network optimization.
+              Solusi infrastruktur yang tangguh dan dapat diskalakan termasuk
+              layanan cloud dan optimalisasi jaringan.
             </p>
             <ul class="text-sm text-gray-400 space-y-1">
-              <li>• Cloud Migration</li>
-              <li>• Network Security</li>
-              <li>• System Integration</li>
+              <li>• Migrasi Cloud</li>
+              <li>• Keamanan Jaringan</li>
+              <li>• Integrasi Sistem</li>
             </ul>
           </div>
 
           <div
-            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all hover:transform hover:scale-105"
+            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
           >
             <div
               class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4"
@@ -494,20 +450,20 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Mobile Development</h3>
+            <h3 class="text-xl font-semibold mb-3">Pengembangan Mobile</h3>
             <p class="text-gray-300 mb-4">
-              Native and cross-platform mobile applications that deliver
-              exceptional user experiences.
+              Aplikasi seluler native dan lintas platform yang memberikan
+              pengalaman pengguna yang luar biasa.
             </p>
             <ul class="text-sm text-gray-400 space-y-1">
-              <li>• iOS Apps</li>
-              <li>• Android Apps</li>
+              <li>• Aplikasi iOS</li>
+              <li>• Aplikasi Android</li>
               <li>• React Native</li>
             </ul>
           </div>
 
           <div
-            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all hover:transform hover:scale-105"
+            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
           >
             <div
               class="w-12 h-12 bg-yellow-500 rounded-lg flex items-center justify-center mb-4"
@@ -526,20 +482,20 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3">Technology Research</h3>
+            <h3 class="text-xl font-semibold mb-3">Riset Teknologi</h3>
             <p class="text-gray-300 mb-4">
-              Cutting-edge research and development to keep your business ahead
-              of technological trends.
+              Penelitian dan pengembangan mutakhir untuk menjaga bisnis Anda
+              tetap terdepan dalam tren teknologi.
             </p>
             <ul class="text-sm text-gray-400 space-y-1">
               <li>• AI & Machine Learning</li>
-              <li>• IoT Solutions</li>
-              <li>• Blockchain Development</li>
+              <li>• Solusi IoT</li>
+              <li>• Pengembangan Blockchain</li>
             </ul>
           </div>
 
           <div
-            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all hover:transform hover:scale-105"
+            class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors"
           >
             <div
               class="w-12 h-12 bg-indigo-500 rounded-lg flex items-center justify-center mb-4"
@@ -558,15 +514,15 @@
                 ></path>
               </svg>
             </div>
-            <h3 class="text-xl font-semibold mb-3">IT Consulting</h3>
+            <h3 class="text-xl font-semibold mb-3">Konsultasi TI</h3>
             <p class="text-gray-300 mb-4">
-              Strategic technology consulting to optimize your IT investments
-              and drive business growth.
+              Konsultasi teknologi strategis untuk mengoptimalkan investasi TI
+              Anda dan mendorong pertumbuhan bisnis.
             </p>
             <ul class="text-sm text-gray-400 space-y-1">
-              <li>• Technology Assessment</li>
-              <li>• Roadmap Planning</li>
-              <li>• Performance Optimization</li>
+              <li>• Penilaian Teknologi</li>
+              <li>• Perencanaan Roadmap</li>
+              <li>• Optimalisasi Kinerja</li>
             </ul>
           </div>
         </div>
@@ -578,17 +534,17 @@
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold mb-6">
-            Get In <span class="text-yellow-400">Touch</span>
+            <span class="text-yellow-400">Hubungi</span> Kami
           </h2>
           <p class="text-lg text-gray-300">
-            Ready to transform your business with cutting-edge technology
-            solutions? Let's discuss your project.
+            Siap mengubah bisnis Anda dengan solusi teknologi terkini? Mari
+            diskusikan proyek Anda.
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           <div>
-            <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+            <h3 class="text-2xl font-semibold mb-6">Informasi Kontak</h3>
             <div class="space-y-4">
               <div class="flex items-center space-x-4">
                 <div
@@ -639,7 +595,7 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="font-semibold">Location</p>
+                  <p class="font-semibold">Lokasi</p>
                   <p class="text-gray-300">Indonesia</p>
                 </div>
               </div>
@@ -670,7 +626,7 @@
             </div>
 
             <div class="mt-8">
-              <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+              <h4 class="text-lg font-semibold mb-4">Ikuti Kami</h4>
               <div class="flex space-x-4">
                 <a
                   href="https://www.linkedin.com/company/mitra-coretech"
@@ -691,14 +647,14 @@
           </div>
 
           <div>
-            <h3 class="text-2xl font-semibold mb-6">Send Us a Message</h3>
+            <h3 class="text-2xl font-semibold mb-6">Kirim Pesan</h3>
             <form id="contact-form" class="space-y-4">
               <div>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  placeholder="Your Name"
+                  placeholder="Nama Anda"
                   required
                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-yellow-400 text-white placeholder-gray-400"
                 />
@@ -708,7 +664,7 @@
                   type="email"
                   id="email"
                   name="email"
-                  placeholder="Your Email"
+                  placeholder="Email Anda"
                   required
                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-yellow-400 text-white placeholder-gray-400"
                 />
@@ -718,7 +674,7 @@
                   type="text"
                   id="subject"
                   name="subject"
-                  placeholder="Subject"
+                  placeholder="Subjek"
                   required
                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-yellow-400 text-white placeholder-gray-400"
                 />
@@ -728,7 +684,7 @@
                   id="message"
                   name="message"
                   rows="4"
-                  placeholder="Your Message"
+                  placeholder="Pesan Anda"
                   required
                   class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:border-yellow-400 text-white placeholder-gray-400"
                 ></textarea>
@@ -737,7 +693,7 @@
                 type="submit"
                 class="w-full px-6 py-3 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition-colors"
               >
-                Send Message
+                Kirim Pesan
               </button>
             </form>
           </div>
@@ -746,19 +702,29 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-900/50 border-t border-blue-700/30 py-8">
+    <footer
+      class="bg-blue-900/90 backdrop-blur-md border-t border-blue-700/30 py-8"
+    >
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="flex items-center space-x-2 mb-4 md:mb-0">
+            <!-- Dynamic footer logo -->
             <img
-              src="./assets/images/logo.png"
+              id="footer-logo"
+              src="./assets/images/logo-dark.png"
               alt="Mitra Coretech Logo"
-              class="h-8 w-8 rounded-lg"
+              class="h-16 w-16 rounded-lg transition-all duration-300"
             />
-            <span class="text-lg font-semibold">Mitra Coretech</span>
+            <!-- Title Footer (conditional visibility) -->
+            <span id="footer-title" class="text-xl font-semibold"
+              >Mitra Coretech</span
+            >
           </div>
           <div class="text-center md:text-right text-gray-400">
-            <p>&copy; 2024 PT Mitra Coretech Indonesia. All rights reserved.</p>
+            <p>
+              &copy; 2024 PT Mitra Coretech Indonesia. Hak cipta dilindungi
+              undang-undang.
+            </p>
           </div>
         </div>
       </div>
@@ -767,7 +733,7 @@
     <!-- Back to Top Button -->
     <button
       id="back-to-top"
-      class="fixed bottom-8 right-8 w-12 h-12 bg-yellow-400 text-black rounded-full shadow-lg hover:bg-yellow-300 transition-all transform hover:scale-110 opacity-0 pointer-events-none"
+      class="fixed bottom-8 right-8 w-12 h-12 bg-yellow-400 text-black rounded-full shadow-lg hover:bg-yellow-300 transition-colors opacity-0 pointer-events-none"
     >
       <svg
         class="w-6 h-6 mx-auto"
@@ -810,37 +776,100 @@
               ></path>
             </svg>
           </div>
-          <h3 class="text-2xl font-semibold mb-2">Message Sent!</h3>
+          <h3 class="text-2xl font-semibold mb-2">Pesan Terkirim!</h3>
           <p class="text-gray-300 mb-6">
-            Thank you for contacting us. We'll get back to you soon.
+            Terima kasih telah menghubungi kami. Kami akan segera kembali kepada
+            Anda.
           </p>
           <button
             id="close-modal"
             class="px-6 py-2 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-300 transition-colors"
           >
-            Close
+            Tutup
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Add CSS animations -->
+    <!-- Add CSS styles -->
     <style>
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
+      /* Light theme styles */
+      html.light body {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        color: #1e293b;
       }
 
-      .animate-float {
-        animation: float 6s ease-in-out infinite;
+      html.light .bg-blue-900\/90 {
+        background: rgba(30, 58, 138, 0.95);
+      }
+
+      html.light .bg-blue-900\/30 {
+        background: rgba(30, 58, 138, 0.1);
+      }
+
+      html.light .bg-blue-900\/50 {
+        background: rgba(30, 58, 138, 0.2);
+      }
+
+      html.light footer.bg-blue-900\/90 {
+        background: rgba(30, 58, 138, 0.95);
+      }
+
+      html.light .border-blue-700\/30 {
+        border-color: rgba(29, 78, 216, 0.3);
+      }
+
+      html.light .text-white {
+        color: #1e293b;
+      }
+
+      html.light .text-gray-300 {
+        color: #64748b;
+      }
+
+      html.light .text-gray-400 {
+        color: #94a3b8;
+      }
+
+      html.light .bg-white\/10 {
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      html.light .bg-white\/5 {
+        background: rgba(255, 255, 255, 0.9);
+      }
+
+      html.light .border-white\/10 {
+        border-color: rgba(0, 0, 0, 0.1);
+      }
+
+      html.light .border-white\/20 {
+        border-color: rgba(0, 0, 0, 0.2);
+      }
+
+      html.light .placeholder-gray-400::placeholder {
+        color: #94a3b8;
+      }
+
+      /* Light theme button styles */
+      html.light #contact-btn {
+        border-color: #64748b;
+        color: #000000;
+      }
+
+      html.light #contact-btn:hover {
+        background: #64748b;
+        color: #ffffff;
       }
 
       /* Responsive adjustments for different screen sizes */
+      @media (min-width: 2560px) {
+        /* 4K and larger screens */
+        #home .container {
+          max-width: 1920px;
+        }
+      }
+
       @media (max-width: 1366px) {
         .hero-logo {
           width: 200px;
@@ -886,84 +915,230 @@
       ::-webkit-scrollbar-thumb:hover {
         background: #f59e0b;
       }
+
+      html.light ::-webkit-scrollbar-track {
+        background: #e2e8f0;
+      }
+
+      html.light ::-webkit-scrollbar-thumb {
+        background: #3b82f6;
+      }
     </style>
 
     <script>
-      // Mobile menu toggle
-      document
-        .getElementById("mobile-menu-btn")
-        .addEventListener("click", function () {
-          const mobileMenu = document.getElementById("mobile-menu");
-          mobileMenu.classList.toggle("hidden");
-        });
+      // Logo Management System
+      class LogoManager {
+        constructor() {
+          this.navLogo = document.getElementById("nav-logo");
+          this.footerLogo = document.getElementById("footer-logo");
+          this.navTitle = document.getElementById("nav-title");
+          this.footerTitle = document.getElementById("footer-title");
+          this.themeToggle = document.getElementById("theme-toggle");
+          this.themeIconDark = document.getElementById("theme-icon-dark");
+          this.themeIconLight = document.getElementById("theme-icon-light");
 
-      // Back to top button
-      const backToTopButton = document.getElementById("back-to-top");
-
-      window.addEventListener("scroll", function () {
-        if (window.pageYOffset > 300) {
-          backToTopButton.classList.remove("opacity-0", "pointer-events-none");
-          backToTopButton.classList.add("opacity-100");
-        } else {
-          backToTopButton.classList.add("opacity-0", "pointer-events-none");
-          backToTopButton.classList.remove("opacity-100");
+          this.init();
         }
-      });
 
-      backToTopButton.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
+        init() {
+          // Initialize theme
+          this.updateTheme();
+          this.updateLogos();
 
-      // Contact form submission
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
+          // Event listeners
+          this.themeToggle.addEventListener("click", () => this.toggleTheme());
+          window.addEventListener("resize", () => this.updateLogos());
 
-          // Show success modal
-          document.getElementById("success-modal").classList.remove("hidden");
+          // DEBUG: Log initial state
+          console.log("=== LOGO MANAGER INITIALIZED ===");
+          console.log("Current theme:", this.getCurrentTheme());
+          console.log("Screen width:", window.innerWidth);
+          console.log("Is mobile:", this.isMobile());
+          console.log("=== END INIT ===");
+        }
 
-          // Reset form
-          this.reset();
-        });
+        getCurrentTheme() {
+          return document.documentElement.classList.contains("dark")
+            ? "dark"
+            : "light";
+        }
 
-      // Close modal
-      document
-        .getElementById("close-modal")
-        .addEventListener("click", function () {
-          document.getElementById("success-modal").classList.add("hidden");
-        });
+        isMobile() {
+          return window.innerWidth < 768;
+        }
 
-      // Close modal when clicking outside
-      document
-        .getElementById("success-modal")
-        .addEventListener("click", function (e) {
-          if (e.target === this) {
-            this.classList.add("hidden");
+        toggleTheme() {
+          const html = document.documentElement;
+          const isDark = html.classList.contains("dark");
+
+          if (isDark) {
+            html.classList.remove("dark");
+            html.classList.add("light");
+          } else {
+            html.classList.remove("light");
+            html.classList.add("dark");
+          }
+
+          this.updateTheme();
+          this.updateLogos();
+
+          console.log("Theme toggled to:", this.getCurrentTheme());
+        }
+
+        updateTheme() {
+          const isDark = this.getCurrentTheme() === "dark";
+
+          // Update theme icons
+          if (isDark) {
+            this.themeIconDark.classList.add("hidden");
+            this.themeIconLight.classList.remove("hidden");
+          } else {
+            this.themeIconDark.classList.remove("hidden");
+            this.themeIconLight.classList.add("hidden");
+          }
+        }
+
+        updateLogos() {
+          const theme = this.getCurrentTheme();
+          const isMobile = this.isMobile();
+
+          // Determine logo path
+          let logoPath;
+          if (isMobile) {
+            logoPath = "./assets/images/logo.png";
+          } else {
+            logoPath =
+              theme === "dark"
+                ? "./assets/images/logo-light.png"
+                : "./assets/images/logo-dark.png";
+          }
+
+          // Update logo sources
+          if (this.navLogo) this.navLogo.src = logoPath;
+          if (this.footerLogo) this.footerLogo.src = logoPath;
+
+          // Update logo sizes for mobile
+          if (isMobile) {
+            if (this.navLogo) {
+              this.navLogo.className =
+                "h-10 rounded-lg transition-all duration-300";
+            }
+            if (this.footerLogo) {
+              this.footerLogo.className =
+                "h-10 rounded-lg transition-all duration-300";
+            }
+          } else {
+            if (this.navLogo) {
+              this.navLogo.className =
+                "h-12 rounded-lg transition-all duration-300";
+            }
+            if (this.footerLogo) {
+              this.footerLogo.className =
+                "h-12 rounded-lg transition-all duration-300";
+            }
+          }
+
+          // Conditional title visibility - hide title when logo is present and visible
+          const shouldHideTitle = !isMobile; // Hide title on desktop, show on mobile
+          if (this.navTitle) {
+            this.navTitle.style.display = shouldHideTitle ? "none" : "block";
+          }
+          if (this.footerTitle) {
+            this.footerTitle.style.display = shouldHideTitle ? "none" : "block";
+          }
+
+          console.log("Logos updated:", {
+            theme,
+            isMobile,
+            logoPath,
+            titleVisible: !shouldHideTitle,
+          });
+        }
+      }
+
+      // Initialize logo manager when DOM is ready
+      document.addEventListener("DOMContentLoaded", () => {
+        new LogoManager();
+
+        // Mobile menu toggle
+        document
+          .getElementById("mobile-menu-btn")
+          .addEventListener("click", function () {
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.toggle("hidden");
+          });
+
+        // Back to top button
+        const backToTopButton = document.getElementById("back-to-top");
+
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove(
+              "opacity-0",
+              "pointer-events-none"
+            );
+            backToTopButton.classList.add("opacity-100");
+          } else {
+            backToTopButton.classList.add("opacity-0", "pointer-events-none");
+            backToTopButton.classList.remove("opacity-100");
           }
         });
 
-      // Active navigation highlighting
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll('nav a[href^="#"]');
-
-      window.addEventListener("scroll", function () {
-        let current = "";
-
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-
-          if (pageYOffset >= sectionTop - 100) {
-            current = section.getAttribute("id");
-          }
+        backToTopButton.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
         });
 
-        navLinks.forEach((link) => {
-          link.classList.remove("text-yellow-400");
-          if (link.getAttribute("href").slice(1) === current) {
-            link.classList.add("text-yellow-400");
-          }
+        // Contact form submission
+        document
+          .getElementById("contact-form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Show success modal
+            document.getElementById("success-modal").classList.remove("hidden");
+
+            // Reset form
+            this.reset();
+          });
+
+        // Close modal
+        document
+          .getElementById("close-modal")
+          .addEventListener("click", function () {
+            document.getElementById("success-modal").classList.add("hidden");
+          });
+
+        // Close modal when clicking outside
+        document
+          .getElementById("success-modal")
+          .addEventListener("click", function (e) {
+            if (e.target === this) {
+              this.classList.add("hidden");
+            }
+          });
+
+        // Active navigation highlighting
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        window.addEventListener("scroll", function () {
+          let current = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (pageYOffset >= sectionTop - 100) {
+              current = section.getAttribute("id");
+            }
+          });
+
+          navLinks.forEach((link) => {
+            link.classList.remove("text-yellow-400");
+            if (link.getAttribute("href").slice(1) === current) {
+              link.classList.add("text-yellow-400");
+            }
+          });
         });
       });
     </script>

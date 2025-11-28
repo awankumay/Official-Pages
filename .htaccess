@@ -1,21 +1,21 @@
-# === MAINTENANCE MODE CONFIGURATION ===
-# Return 503 status code for maintenance page
-<IfModule mod_headers.c>
-    Header set X-Maintenance-Mode "active"
-    Header set Retry-After "86400"
-</IfModule>
+# # === MAINTENANCE MODE CONFIGURATION ===
+# # Return 503 status code for maintenance page
+# <IfModule mod_headers.c>
+#     Header set X-Maintenance-Mode "active"
+#     Header set Retry-After "86400"
+# </IfModule>
 
-# Error document
-ErrorDocument 503 /index.html
+# # Error document
+# ErrorDocument 503 /index.html
 
-# Cache control for maintenance page
-<IfModule mod_headers.c>
-    <FilesMatch "\.(html|htm)$">
-        Header set Cache-Control "no-cache, no-store, must-revalidate"
-        Header set Pragma "no-cache"
-        Header set Expires "0"
-    </FilesMatch>
-</IfModule>
+# # Cache control for maintenance page
+# <IfModule mod_headers.c>
+#     <FilesMatch "\.(html|htm)$">
+#         Header set Cache-Control "no-cache, no-store, must-revalidate"
+#         Header set Pragma "no-cache"
+#         Header set Expires "0"
+#     </FilesMatch>
+# </IfModule>
 
 # === LAYER SECURITY TAMBAHAN ===
 
@@ -41,9 +41,9 @@ Options -Indexes
 RewriteEngine On
 
 # Set 503 status code for maintenance mode (root and index.html)
-RewriteCond %{REQUEST_URI} ^/index\.html$ [OR]
-RewriteCond %{REQUEST_URI} ^/$
-RewriteRule .* - [R=503,L]
+# RewriteCond %{REQUEST_URI} ^/index\.html$ [OR]
+# RewriteCond %{REQUEST_URI} ^/$
+# RewriteRule .* - [R=503,L]
 
 # Kecuali favicon.ico dan ojs-dev
 RewriteCond %{REQUEST_URI} !^/favicon\.ico$ [NC]
