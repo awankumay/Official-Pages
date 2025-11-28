@@ -1,0 +1,23 @@
+# === MAINTENANCE MODE - BLOK SEMUA AKSES ===
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Jika BUKAN meminta maintenance.html, arahkan ke maintenance.html dengan kode 503
+    RewriteCond %{REQUEST_URI} !^/maintenance\.html$ [NC]
+    RewriteRule ^.*$ /maintenance.html [R=503,L]
+</IfModule>
+
+# Pastikan maintenance.html tidak di-cache
+<Files "maintenance.html">
+    <IfModule mod_headers.c>
+        FileETag None
+        Header set Cache-Control "no-cache, no-store, must-revalidate, private"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </IfModule>
+</Files>
+
+# Opsional: Tambahkan header Retry-After
+<IfModule mod_headers.c>
+    Header always set Retry-After "3600" env=REDIRECT_STATUS
+</IfModule>
