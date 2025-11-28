@@ -70,8 +70,21 @@ html.light #contact-btn:hover {
 /* Responsive adjustments for different screen sizes */
 @media (min-width: 2560px) {
   /* 4K and larger screens */
-  #home .container {
+  #home .container,
+  #about .container,
+  #services .container,
+  #contact .container {
     max-width: 1920px;
+  }
+}
+
+@media (min-width: 1920px) {
+  /* 2K/1440p and larger screens */
+  #home .container,
+  #about .container,
+  #services .container,
+  #contact .container {
+    max-width: 1600px;
   }
 }
 
